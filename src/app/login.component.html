@@ -1,0 +1,26 @@
+<form (ngSubmit)="onSubmit()" #loginForm="ngForm" class="space-y-4">
+  <div>
+    <label class="block mb-1" for="username">Usuario</label>
+    <input
+      id="username"
+      name="username"
+      [(ngModel)]="username"
+      required
+      class="border p-2 w-full"
+      type="text"
+    />
+  </div>
+  <div>
+    <label class="block mb-1" for="password">Contraseña</label>
+    <input
+      id="password"
+      name="password"
+      [(ngModel)]="password"
+      required
+      class="border p-2 w-full"
+      type="password"
+    />
+  </div>
+  <button class="bg-sky-700 text-white px-4 py-2" type="submit">Entrar</button>
+  <p *ngIf="error" class="text-red-600">{{ error }}</p>
+</form>

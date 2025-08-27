@@ -1,16 +1,11 @@
 import { Component } from '@angular/core';
-import { NgFor } from '@angular/common';
+import { RouterOutlet, RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-root',
-  imports: [NgFor],
+  standalone: true,
+  imports: [RouterOutlet, RouterLink],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
-export class App {
-  protected readonly productos = [
-    { nombre: 'Paracetamol', precio: 5 },
-    { nombre: 'Ibuprofeno', precio: 8 },
-    { nombre: 'Aspirina', precio: 6 }
-  ];
-}
+export class App {}

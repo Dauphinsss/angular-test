@@ -1,0 +1,6 @@
+<ul class="space-y-4">
+  <li *ngFor="let producto of productos" class="p-4 bg-white border border-sky-200 rounded shadow">
+    <span class="block text-lg font-medium text-sky-900">{{ producto.nombre }}</span>
+    <span class="text-sky-600">$ {{ producto.precio }}</span>
+  </li>
+</ul>
